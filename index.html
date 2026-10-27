@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>إشعار متابعة ولي الأمر – الرياضيات للسادس الابتدائي</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+:root{--bg:#f4f6fa;--c:#fff;--t:#1d2433;--m:#667085;--p:#0f766e;--pl:#e6f4f2;--b:#e4e7ec;--bad:#b42318;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1420;--c:#182030;--t:#e8ecf4;--m:#9aa5b8;--p:#2dd4bf;--pl:#12302f;--b:#2a3447;--bad:#f97066;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1420;--c:#182030;--t:#e8ecf4;--m:#9aa5b8;--p:#2dd4bf;--pl:#12302f;--b:#2a3447;--bad:#f97066;color-scheme:dark}
+html,body{margin:0;background:var(--bg);color:var(--t);font-family:Cairo,Tahoma,"Segoe UI",system-ui,sans-serif;line-height:1.7}
+.w{max-width:1100px;margin:0 auto;padding:14px}
+.card{background:var(--c);border:1px solid var(--b);border-radius:14px;padding:16px;margin-bottom:14px}
+h1{font-size:20px;margin:0}h2{font-size:17px;margin:0 0 10px}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+button,select,input{font:inherit;color:var(--t);background:var(--c);border:1px solid var(--b);border-radius:9px;padding:7px 11px}
+button{cursor:pointer}button.p{background:var(--p);color:#fff;border-color:var(--p)}button.d{color:var(--bad)}
+input[type=number]{width:62px;text-align:center}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{border-bottom:1px solid var(--b);padding:6px 8px;text-align:center;white-space:nowrap}th{background:var(--pl);position:sticky;top:0}td:nth-child(2){text-align:right}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.pc{cursor:pointer;text-align:center;padding:22px;border:2px solid var(--b);border-radius:14px;background:var(--c);font-size:18px;font-weight:700}
+.pc.on{border-color:var(--p);background:var(--pl)}
+.sub{border:1px solid var(--b);border-radius:12px;padding:14px;background:var(--c)}
+.sub b{font-size:26px;color:var(--p)}.pr{height:8px;background:var(--b);border-radius:6px;overflow:hidden;margin:8px 0}.pr i{display:block;height:100%;background:var(--p)}
+.m{color:var(--m);font-size:13px}.err{color:var(--bad)}
+.lg{max-width:380px;margin:9vh auto}.lg input{width:100%;box-sizing:border-box;margin:5px 0 10px}
+body{background:linear-gradient(180deg,color-mix(in srgb,#4f46e5 9%,var(--bg)),var(--bg) 380px) no-repeat,var(--bg)}
+.card{border-top:5px solid var(--ac,var(--p));border-radius:16px;box-shadow:0 6px 18px rgba(16,24,40,.06)}
+.card h2{color:var(--ac,var(--t))}
+.ct{--ac:#0d9488}.c1{--ac:#2563eb}.c2{--ac:#7c3aed}.cg{--ac:#16a34a}.cr{--ac:#e11d48}.cm{--ac:#d97706}.cl{--ac:#4f46e5}
+.card.cm{background:linear-gradient(135deg,color-mix(in srgb,#f59e0b 16%,var(--c)),var(--c))}
+.hero{background:linear-gradient(120deg,#0f766e,#2563eb 50%,#7c3aed);color:#fff;border-radius:20px;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;box-shadow:0 10px 26px rgba(37,99,235,.25)}
+.hero h1{font-size:22px;font-weight:800}.hero span{font-size:13px;opacity:.9}
+.hl,.hr{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.logo{font-size:28px;width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.2);display:grid;place-items:center}
+.hero button{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.4)}
+.chip{background:rgba(255,255,255,.2);border-radius:20px;padding:4px 12px}
+button{transition:.15s}button:hover{filter:brightness(1.07);transform:translateY(-1px)}
+button.p{background:var(--ac,var(--p));border-color:var(--ac,var(--p))}
+textarea{font:inherit;color:var(--t);background:var(--c);border:1px solid var(--b);border-radius:10px;padding:10px;width:100%;box-sizing:border-box;margin-bottom:8px}
+.pm{font-size:15.5px;line-height:2}
+.sh{display:flex;align-items:center;gap:14px}.av{width:56px;height:56px;border-radius:50%;background:var(--ac);color:#fff;font-size:26px;font-weight:800;display:grid;place-items:center}
+.pc{border-radius:18px;padding:26px 18px;border:2px solid var(--ac);background:color-mix(in srgb,var(--ac) 9%,var(--c));color:var(--ac);transition:.15s}
+.pc:hover{transform:translateY(-2px)}
+.pc small{display:block;font-size:12px;font-weight:400;margin-top:4px;opacity:.85}
+.pc.on{background:var(--ac);color:#fff;box-shadow:0 8px 20px color-mix(in srgb,var(--ac) 40%,transparent)}
+.sub{border-top:4px solid var(--ac);background:color-mix(in srgb,var(--ac) 6%,var(--c))}
+.sub .sl{font-weight:700;margin-bottom:4px}.sub b{color:var(--ac)}.pr i{background:var(--ac)}
+.tot{display:inline-block;background:var(--ac);color:#fff;border-radius:20px;padding:5px 18px;font-weight:700}
+.cg th{background:color-mix(in srgb,var(--ac) 16%,var(--c))}
+th.hp1{background:color-mix(in srgb,#2563eb 20%,var(--c))}th.hp2{background:color-mix(in srgb,#7c3aed 20%,var(--c))}
+.lg .logo{margin:0 auto 8px;background:var(--ac);color:#fff}.lg h1,.lg>.m{text-align:center}
+.wl{background:color-mix(in srgb,#f59e0b 16%,var(--c));border-radius:10px;padding:8px 12px;font-size:14px}
+.xa{--ac:#2563eb;--ac2:#06b6d4}.xb{--ac:#9333ea;--ac2:#ec4899}.xc{--ac:#ea580c;--ac2:#f59e0b}
+.sub{position:relative;overflow:hidden;border:none;border-radius:20px;padding:24px 18px 20px;text-align:center;background:linear-gradient(160deg,color-mix(in srgb,var(--ac) 14%,var(--c)),var(--c) 70%);box-shadow:0 10px 24px color-mix(in srgb,var(--ac) 18%,transparent);transition:.2s}
+.sub:hover{transform:translateY(-4px)}
+.sub::before{content:"";position:absolute;inset:0 0 auto 0;height:7px;background:linear-gradient(90deg,var(--ac),var(--ac2))}
+.sub .sl{font-size:16px;margin:6px 0 10px}
+.sub b{font-size:44px;font-weight:800;line-height:1.1;background:linear-gradient(135deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.pr{height:10px}.pr i{background:linear-gradient(90deg,var(--ac),var(--ac2))}
+.tabs{display:flex;gap:8px;margin-bottom:10px}.tabs button{flex:1}
+td input{width:62px;text-align:center}
+.cw{--ac:#dc2626}.weak{background:linear-gradient(135deg,color-mix(in srgb,#ef4444 12%,var(--c)),var(--c));line-height:2}
+.bd{display:inline-block;border-radius:14px;padding:2px 10px;font-size:12px;font-weight:700}.gd{background:color-mix(in srgb,#f59e0b 22%,var(--c));color:#b45309}.bw{background:color-mix(in srgb,#ef4444 18%,var(--c));color:var(--bad)}
+.cert{max-width:760px;margin:16px auto;padding:34px 28px;text-align:center;border-radius:18px;background:#fffdf5;color:#3b2f0b;border:8px double #c9962b;box-shadow:0 12px 30px rgba(201,150,43,.25)}
+.cert h2{font-size:34px;color:#b07d10;margin:4px 0 10px;font-weight:800}.cert .cs{font-size:54px}
+.cert .cn{font-size:30px;font-weight:800;color:#8a5a00;margin:8px 0;border-bottom:2px solid #e3c06a;display:inline-block;padding:0 24px}
+.cert p{font-size:17px;line-height:2;margin:4px 0}
+.cert .sg{display:flex;justify-content:space-around;margin-top:26px;font-weight:700}.cert .sg span{border-top:1px solid #8a5a00;padding-top:6px;min-width:150px}
+.cert{padding:26px 30px}.cert p.to{font-size:21px;font-weight:700}.cert .cn{display:inline;font-size:24px;padding:0 10px}
+.cert .ft{margin-top:16px;padding-top:10px;border-top:2px solid #e3c06a;font-weight:800;color:#8a5a00;font-size:20px}
+.tc{margin-top:16px;padding:26px 20px;border-radius:24px;text-align:center;color:#fff;background:linear-gradient(135deg,#0f766e,#2563eb 60%,#7c3aed);box-shadow:0 16px 34px rgba(37,99,235,.3)}
+.tc .tl{font-size:18px;font-weight:700;opacity:.95}
+.tc .tn b{font-size:76px;font-weight:800;line-height:1.1;color:#fff;background:none;-webkit-background-clip:initial;background-clip:initial}.tc .tn span{font-size:28px;opacity:.9}
+.tc .pr{height:14px;background:rgba(255,255,255,.25);max-width:420px;margin:12px auto}.tc .pr i{background:#fff}
+.tc .tg{display:inline-block;margin-top:6px;background:#fff;color:var(--g);border-radius:30px;padding:6px 26px;font-size:22px;font-weight:800}
+.tc .tg b{font-size:inherit;color:inherit;background:none}.tc .m{color:#fff;opacity:.9}
+.md{position:fixed;inset:0;background:rgba(0,0,0,.45);display:grid;place-items:center;z-index:50;padding:16px}
+.mb{background:var(--c);color:var(--t);border-radius:18px;padding:20px;max-width:460px;width:100%;box-shadow:0 20px 50px rgba(0,0,0,.35)}.mb h2{margin:0 0 8px}
+.ts{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:#1d2433;color:#fff;border-radius:30px;padding:10px 22px;z-index:60;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90%;text-align:center}
+.weak h2{text-align:center;font-size:24px;margin-bottom:12px}.weak p{margin:6px 0}
+#pr{display:none}
+@page{size:A4 landscape;margin:12mm}
+@media print{.np{display:none!important}body{background:#fff;color:#000}body.pcert #app{display:none!important}body.pcert #pr{display:block}}
+</style></head><body><div class="w" id="app"></div><div id="pr"></div><script src="/config.js"></script>
+<script>
+const SK='mathgrades_demo_v5';
+const P=[['p1','الفترة الأولى','اختبار الفترة الأولى']];
+const K=[['a','المشاركة والواجبات'],['b','المهام الأدائية'],['c',null]];
+const keys=[];P.forEach(p=>K.forEach(k=>keys.push(p[0]+k[0])));
+const lbl=k=>{const p=P.find(x=>k.startsWith(x[0])),i=K.find(x=>k.slice(2)===x[0]);return i[1]||p[2]};
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const $=id=>document.getElementById(id);
+let db,me=null,sel=null,fails=0,lock=0,mapCtx=null,lm='p',strikes=0;
+const nd=s=>String(s).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[^0-9]/g,'');
+const rnd=n=>{const c='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789@#',a=crypto.getRandomValues(new Uint8Array(n));return[...a].map(x=>c[x%c.length]).join('')};
+const sha=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(x=>x.toString(16).padStart(2,'0')).join('');
+const mk=async(u,pw,role,name,sid,contact)=>{const s=rnd(10);return{u,s,h:await sha(s+pw),role,name,sid,contact:contact||''}};
+const save=()=>{try{0}catch(e){}};
+const log=a=>{db.audit.unshift({t:new Date().toISOString(),by:me?me.u:'-',a});db.audit.length=Math.min(db.audit.length,500);save()};
+const hij=d=>new Date(d).toLocaleDateString('ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'short',year:'numeric'});
+const gre=d=>new Date(d).toLocaleDateString('ar-SA-u-ca-gregory',{day:'numeric',month:'short',year:'numeric'});
+function loginView(m){return `<div class="card lg cl"><div class="logo">🔔</div><h1>إشعار متابعة ولي الأمر</h1><p class="m">السادس الابتدائي – ابتدائية السعودية بالقنفذة</p>
+<p class="wl">ولي الأمر الكريم : يُرجى تسجيل الدخول من خلال الرمز السري المرسل مع الابن لمتابعة درجات ابنكم في مادة الرياضيات خلال الفترة الأولى من الفصل الدراسي الأول للعام ١٤٤٨ هـ</p><div class="tabs"><button class="${lm==='p'?'p':''}" onclick="lm='p';render()">ولي الأمر</button><button class="${lm==='t'?'p':''}" onclick="lm='t';render()">المعلم / المدير</button></div>${lm==='p'?`<label>الرمز السري (${ar(PIN_LEN)} أرقام)</label><input id="pin" inputmode="numeric" maxlength="${PIN_LEN}" autocomplete="off" style="text-align:center;font-size:28px;letter-spacing:12px" oninput="this.value=ar(nd(this.value))" onkeydown="if(event.key==='Enter')login()">`:`<label>الرمز السري للمعلم (٦ خانات: حروف إنجليزية وأرقام)</label><input id="tp" type="password" dir="ltr" maxlength="6" autocomplete="off" autocapitalize="off" style="text-align:center;font-size:26px;letter-spacing:8px" oninput="this.value=this.value.replace(/[^A-Za-z0-9]/g,'')" onkeydown="if(event.key==='Enter')login()">`}
+<button class="p" style="width:100%" onclick="login()">دخول</button><p class="err">${m||''}</p>
+</div>`}
+async function login(){
+  if(Date.now()<lock)return render(`محاولات كثيرة، انتظر ${Math.ceil((lock-Date.now())/1000)} ثانية`);
+  let u,pwv;if(lm==='p'){pwv=nd($('pin').value);if(pwv.length!==4)return render('أدخل رمزاً من ٤ أرقام');for(const x of db.users)if(x.role==='student'&&await sha(x.s+pwv)===x.h){u=x;break}}else{pwv=$('tp').value.replace(/[^A-Za-z0-9]/g,'');if(pwv.length!==6)return render('أدخل رمزاً من ٦ خانات');for(const x of db.users)if(x.role!=='student'&&await sha(x.s+pwv)===x.h){u=x;break}}
+  if(u&&await sha(u.s+pwv)===u.h){fails=0;strikes=0;me=u;sel=null;log('تسجيل دخول');render()}
+  else{if(++fails>=5){lock=Date.now()+Math.min(30000*2**strikes++,3600000);fails=0}log('محاولة دخول فاشلة ('+(lm==='p'?'رمز ولي أمر':'معلم')+')');render('بيانات الدخول غير صحيحة')}}
+function logout(){log('تسجيل خروج');me=null;render()}
+const head=()=>`<header class="hero np"><div class="hl"><div class="logo">🔔</div><div><h1>إشعار متابعة ولي الأمر</h1><span>الرياضيات – السادس الابتدائي · ابتدائية السعودية بالقنفذة</span></div></div><div class="hr"><span class="chip">${esc(me.name)} · ${{teacher:'معلم',manager:'مدير',student:'طالب / ولي أمر'}[me.role]}</span>${me.role==='student'?'':'<button onclick="chpwUI()">تغيير الرمز</button>'}<button onclick="logout()">خروج</button></div></header>`;
+function render(m){
+  const a=$('app');
+  if(!me)a.innerHTML=loginView(m);
+  else if(me.role==='student')a.innerHTML=head()+parentMsg()+studentView();
+  else a.innerHTML=head()+teacherView();}
+const DEFMSG='حرصًا على تعزيز الشراكة بين المدرسة والأسرة، نضع بين أيديكم إشعارًا بدرجات ابنكم في مادة الرياضيات خلال الفترة الأولى، آملين منكم الاطلاع على مستواه الدراسي، وتعزيز جوانب تميزه، ومساندته فيما يحتاج إلى تحسين.\nفبمتابعتكم وتشجيعكم يستمر العطاء ويتحقق التميز.\nشاكرين لكم تعاونكم واهتمامكم.';
+const DEFMSG_OLD='ولي أمر الطالب الكريم ({الاسم}) — السلام عليكم ورحمة الله وبركاته،\nيسعدنا أن نضع بين أيديكم درجات ابنكم في مادة الرياضيات أولاً بأول، إيماناً بأن الشراكة بين المدرسة والأسرة هي أساس نجاحه. نأمل منكم مراجعة الدرجات دورياً، وتشجيع ابنكم على المذاكرة وحل الواجبات، والتواصل مع معلم المادة عند الحاجة.\nشاكرين لكم تعاونكم ودعمكم.\nمعلم الرياضيات – ابتدائية السعودية بالقنفذة';
+function parentMsg(){const s=db.students.find(x=>x.id===me.sid);return `<div class="card cm pm"><h2>✉️ رسالة إلى ولي الأمر</h2>${esc(db.msg||DEFMSG).replace(/\{الاسم\}/g,()=>esc(s?s.name:'')).replace(/\n/g,'<br>')}</div>`}
+function saveMsg(){db.msg=$('mt').value.trim()||DEFMSG;log('تحديث رسالة ولي الأمر');render();toast('تم حفظ الرسالة ✅')}
+function previewMsg(){const t=esc($('mt').value||DEFMSG).replace(/\{الاسم\}/g,()=>esc(db.students[0]?db.students[0].name:'الطالب')).replace(/\n/g,'<br>');modal(`<h2>✉️ معاينة رسالة ولي الأمر</h2><div class="pm">${t}</div><div class="bar" style="margin-top:12px"><button onclick="closeM()">إغلاق</button></div>`)}
+function studentView(){
+  const s=db.students.find(x=>x.id===me.sid);if(!s)return'<div class="card">لا توجد بيانات.</div>';
+  let h=`<div class="card ct sh"><div class="av">${esc([...s.name][0]||'')}</div><div><h2>${esc(s.name)}</h2><span class="m">الفصل: ${esc(s.cls)} — مادة الرياضيات</span></div></div>`;
+  
+  
+  {const p=P[0];let tot=0;
+    h+=`<div class="g2">`;
+    K.forEach(k=>{const key=p[0]+k[0],e=s.g[key];if(e)tot+=e.v;
+      h+=`<div class="sub x${k[0]}"><div class="sl">${{a:'📝',b:'🧩',c:'📋',d:'🏆'}[k[0]]} ${lbl(key)}</div>${e?`<b>${e.v}</b> / 20<div class="pr"><i style="width:${e.v*5}%"></i></div>`:`<b>—</b> / 20<div class="pr"></div><span class="m">لم تُرصد بعد</span>`}</div>`});
+    h+=`</div><div class="tc"><div class="tl">المجموع الكلي</div><div class="tn"><b>${tot}</b><span> / 60</span></div><div class="pr"><i style="width:${tot/60*100}%"></i></div>${cntS(s)===3?`<div class="tg" style="--g:${gradeOf(tot)[1]}">التقدير: <b>${gradeOf(tot)[0]}</b></div>`:'<div class="m">يظهر التقدير بعد رصد الدرجات الثلاث</div>'}</div>`}
+  const z=stS(s);if(z===1)h+=certHTML(s)+'<div class="np" style="text-align:center"><button class="p cm" onclick="printCert()">🖨️ طباعة الشهادة / حفظها PDF</button></div>';else if(z===-1)h+=weakHTML(s);return h}
+function teacherView(){
+  let h=`<div class="card cm np"><h2>✉️ رسالة ولي الأمر (تظهر أعلى صفحة الطالب)</h2><p class="m">استخدم {الاسم} ليُستبدل باسم الطالب تلقائياً.</p><textarea id="mt" rows="5">${esc(db.msg||DEFMSG)}</textarea><div class="bar"><button class="p" onclick="saveMsg()">حفظ الرسالة</button><button onclick="previewMsg()">👁️ معاينة</button></div></div><div class="card cg"><h2>👩‍🏫 إدارة الطلاب والدرجات</h2><div class="bar np">
+<input type="file" id="f" accept=".xlsx,.xls,.csv" onchange="readF(this)">
+<button onclick="expX()">تصدير Excel</button><button onclick="window.print()">تصدير PDF / طباعة</button>
+<button onclick="bk()">نسخ احتياطي</button></div>
+<div class="bar np"><input id="nn" placeholder="اسم طالب جديد"><input id="nc" placeholder="الفصل" style="width:80px"><input id="nt" placeholder="جوال/بريد ولي الأمر"><button onclick="addS()">إضافة</button></div>
+<div class="bar np"><span>تعديل جماعي للمحدّدين:</span><select id="bk">${keys.map(k=>`<option value="${k}">${P.find(p=>k.startsWith(p[0]))[1]} – ${lbl(k)}</option>`).join('')}</select><input type="text" inputmode="decimal" id="bv" maxlength="4" placeholder="٠-٢٠" style="width:80px;text-align:center"><button class="p" onclick="bulk()">تطبيق</button></div>
+<p class="m np">🏅 المتميزون (٥٥ فأعلى): <b>${db.students.filter(s=>stS(s)===1).length}</b> — ⚠️ بحاجة لدعم (٣٠ فأقل): <b>${db.students.filter(s=>stS(s)===-1).length}</b></p><div id="out"></div><div class="sc"><table><thead><tr><th class="np"><input type="checkbox" onclick="document.querySelectorAll('.ck').forEach(c=>c.checked=this.checked)"></th><th>الاسم</th><th>الفصل</th>`;
+  P.forEach(p=>{K.forEach(k=>h+=`<th class="h${p[0]}">${p[1].replace('الفترة','ف')}<br>${lbl(p[0]+k[0])}</th>`);h+=`<th class="h${p[0]}">مج ${p[1].replace('الفترة','ف')}</th>`});
+  h+='<th>التقدير</th><th class="np">حساب</th></tr></thead><tbody>';
+  db.students.forEach(s=>{h+=`<tr><td class="np"><input type="checkbox" class="ck" value="${s.id}"></td><td>${esc(s.name)}</td><td>${esc(s.cls)}</td>`;
+    P.forEach(p=>{let t=0;K.forEach(k=>{const key=p[0]+k[0],e=s.g[key];if(e)t+=e.v;h+=`<td><input type="text" inputmode="decimal" maxlength="4" value="${e?ar(e.v):''}" onchange="setS('${s.id}','${key}',this)"></td>`});h+=`<td><b>${t}</b></td>`});
+    h+=`<td>${cntS(s)<3?'—':`<span class="bd" style="background:color-mix(in srgb,${gradeOf(sumS(s))[1]} 18%,var(--c));color:${gradeOf(sumS(s))[1]}">${gradeOf(sumS(s))[0]}</span>`}</td><td class="np">${stS(s)===1?`<button onclick="prCert('${s.id}')">🏅 شهادة</button> `:stS(s)===-1?`<button onclick="notice('${s.id}')">⚠️ إشعار</button> `:''}<button onclick="rpw('${s.id}')">رمز جديد</button> <button class="d" onclick="del('${s.id}')">حذف</button></td></tr>`});
+  return h+'</tbody></table></div></div>'}
+function mgrView(){
+  const av=keys.map(k=>{const v=db.students.map(s=>s.g[k]?.v).filter(x=>x!=null);return`<tr><td>${lbl(k)} (${P.find(p=>k.startsWith(p[0]))[1]})</td><td>${v.length?(v.reduce((a,b)=>a+b)/v.length).toFixed(1):'—'}</td></tr>`}).join('');
+  return `<div class="card cr np"><h2>📈 لوحة المدير</h2><p>عدد الطلاب: <b>${db.students.length}</b></p><div class="sc"><table><tr><th>البند</th><th>المتوسط من 20</th></tr>${av}</table></div>
+<h2 style="margin-top:14px">سجل التدقيق (آخر 15)</h2><div class="sc"><table>${db.audit.slice(0,15).map(a=>`<tr><td>${gre(a.t)} ${new Date(a.t).toLocaleTimeString('ar-SA')}</td><td>${esc(a.by)}</td><td style="text-align:right">${esc(a.a)}</td></tr>`).join('')}</table></div></div>`}
+function setS(id,key,el){const s=db.students.find(x=>x.id===id),v=nn(el.value)===''?null:Number(nn(el.value));
+  if(v!==null&&(!Number.isFinite(v)||v<0||v>20)){el.value=s.g[key]?ar(s.g[key].v):'';return alert('الدرجة يجب أن تكون بين ٠ و٢٠')}
+  const old=s.g[key]?.v;if(v===null)delete s.g[key];else s.g[key]={v,d:new Date().toISOString()};
+  log(`تعديل ${s.name} – ${lbl(key)}: ${old??'—'} ← ${v??'—'}`);render()}
+function bulk(){const ids=[...document.querySelectorAll('.ck:checked')].map(c=>c.value),key=$('bk').value,v=Number(nn($('bv').value));
+  if(!ids.length||nn($('bv').value)===''||v<0||v>20||!Number.isFinite(v))return alert('حدّد طلاباً وأدخل درجة صحيحة (٠-٢٠)');
+  ids.forEach(id=>db.students.find(s=>s.id===id).g[key]={v,d:new Date().toISOString()});log(`تعديل جماعي (${ids.length}) – ${lbl(key)} = ${v}`);render()}
+async function uPin(){const us=db.users.filter(x=>x.role==='student');for(let t=0;t<200;t++){const p=String(crypto.getRandomValues(new Uint32Array(1))[0]%9000+1000);let dup=false;for(const x of us)if(await sha(x.s+p)===x.h){dup=true;break}if(!dup)return p}throw new Error('pin')}
+async function newStu(name,cls,contact){const id='S'+(Date.now()%1e7).toString(36).toUpperCase()+rnd(2),pw=await uPin();
+  db.students.push({id,name,cls,g:{}});db.users.push(await mk(id,pw,'student',name,id,contact));return{id,name,cls,pw,contact}}
+async function addS(){const n=$('nn').value.trim();if(!n)return;const c=await newStu(n,$('nc').value.trim()||'6/1',$('nt').value.trim());log('إضافة طالب: '+n);render();
+  $('out').innerHTML=`<p class="err">الرمز السري لولي أمر ${esc(c.name)}: ${esc(c.pw)} — سلّمه لولي الأمر الآن (لا يُعرض مرة أخرى)</p>`}
+function del(id){ask('حذف الطالب وحسابه؟',()=>del2(id))}
+function del2(id){const s=db.students.find(x=>x.id===id);db.students=db.students.filter(x=>x.id!==id);db.users=db.users.filter(u=>u.sid!==id);log('حذف طالب: '+s.name);render()}
+async function rpw(id){const u=db.users.find(x=>x.sid===id),pw=await uPin();u.s=rnd(10);u.h=await sha(u.s+pw);log('إعادة تعيين كلمة مرور: '+u.name);render();$('out').innerHTML=`<p class="err">الرمز السري الجديد (٤ أرقام) لـ ${esc(u.name)}: ${esc(pw)}</p>`}
+async function chpw(){const p=(prompt('الرمز الجديد (٦ خانات: حروف إنجليزية صغيرة وكبيرة وأرقام):')||'').trim();if(!p)return;
+  if(!/^[A-Za-z0-9]{6}$/.test(p)||!/[a-z]/.test(p)||!/[A-Z]/.test(p)||!/[0-9]/.test(p))return alert('الرمز ٦ خانات (إنجليزية) ويحتوي حرفاً صغيراً وحرفاً كبيراً ورقماً');for(const x of db.users)if(x!==me&&x.role!=='student'&&await sha(x.s+p)===x.h)return alert('هذا الرمز مستخدم، اختر رمزاً آخر');me.s=rnd(10);me.h=await sha(me.s+p);log('تغيير كلمة المرور');alert('تم التغيير')}
+const FM=[['name','الاسم',/اسم|name/i],['cls','الفصل',/فصل|صف|class/i],['contact','جوال/بريد ولي الأمر',/جوال|هاتف|بريد|phone|mail/i]];
+P.forEach((p,i)=>{const pr=i?/ثانية|2/:/[اأإ]ولى|1/;[[ 'a','مشاركة|واجب|particip'],['b','مهام|أدائ|task'],['c','اختبار(?!.*نهائ)|test']].forEach(([s,r])=>FM.push([p[0]+s,p[1]+' – '+lbl(p[0]+s),new RegExp(r,'i'),pr]))});
+function readF(el){const f=el.files[0];if(!f)return;const r=new FileReader();
+  r.onload=e=>{try{const wb=XLSX.read(e.target.result,{type:'array'}),rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{header:1,defval:''}).filter(r=>r.some(c=>c!==''));
+    const hd=rows[0].map(String);mapCtx={hd,rows:rows.slice(1)};
+    $('out').innerHTML=`<div class="card"><h2>مطابقة الأعمدة (${mapCtx.rows.length} صف)</h2><div class="g2">${FM.map(([k,l,r,pr],i)=>{const g=hd.findIndex(h=>r.test(h)&&(!pr||pr.test(h)));return`<label>${l}<select id="m${i}"><option value="-1">— تجاهل —</option>${hd.map((h,j)=>`<option value="${j}" ${j===g?'selected':''}>${esc(h)}</option>`).join('')}</select></label>`}).join('')}</div><p class="m">الدرجات الصالحة: أرقام من 0 إلى 20 فقط. الطالب الموجود (نفس الاسم والفصل) يُحدَّث ولا يُكرَّر.</p><button class="p" onclick="doImp()">استيراد</button></div>`}catch(x){alert('تعذّر قراءة الملف')}};
+  r.readAsArrayBuffer(f)}
+async function doImp(){const mp={};FM.forEach(([k],i)=>mp[k]=Number($('m'+i).value));
+  if(mp.name<0)return alert('حدّد عمود الاسم');
+  let add=0,upd=0,bad=0;const cr=[];
+  for(const r of mapCtx.rows){const name=String(r[mp.name]).trim();if(!name)continue;
+    const cls=mp.cls>=0?String(r[mp.cls]).trim()||'6/1':'6/1';
+    let s=db.students.find(x=>x.name===name&&x.cls===cls);
+    if(!s){const c=await newStu(name,cls,mp.contact>=0?String(r[mp.contact]).trim():'');cr.push(c);s=db.students.find(x=>x.id===c.id);add++}else upd++;
+    keys.forEach(k=>{if(mp[k]>=0&&r[mp[k]]!==''){const t=nn(r[mp[k]]),v=t===''?NaN:Number(t);if(Number.isFinite(v)&&v>=0&&v<=20)s.g[k]={v,d:new Date().toISOString()};else bad++}})}
+  log(`استيراد Excel: جديد ${add}، محدَّث ${upd}، قيم مرفوضة ${bad}`);render();
+  $('out').innerHTML=`<div class="card"><p>تم: ${add} جديد، ${upd} محدَّث، ${bad} قيمة مرفوضة.</p>${cr.length?`<div class="sc"><table><tr><th>الاسم</th><th>الفصل</th><th>الرمز السري</th></tr>${cr.map(c=>`<tr><td style="text-align:right">${esc(c.name)}</td><td>${esc(c.cls)}</td><td><b>${esc(c.pw)}</b></td></tr>`).join('')}</table></div><button class="p" onclick='dlCred()'>تنزيل الرموز السرية لأولياء الأمور (Excel)</button><p class="m">الإرسال الفعلي لولي الأمر عبر SMS/بريد يتطلب الخادم؛ هنا تُنزَّل القائمة لتسليمها.</p>`:''}</div>`;window._cr=cr}
+function dlCred(){const ws=XLSX.utils.json_to_sheet(window._cr.map(c=>({'اسم الطالب':c.name,'الفصل':c.cls,'الرمز السري (٤ أرقام)':c.pw,'جهة التواصل':c.contact})));const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Credentials');XLSX.writeFile(wb,'credentials.xlsx');log('تنزيل بيانات الدخول')}
+function expX(){const ws=XLSX.utils.json_to_sheet(db.students.map(s=>{const o={'الاسم':s.name,'الفصل':s.cls};keys.forEach(k=>o[P.find(p=>k.startsWith(p[0]))[1]+' – '+lbl(k)]=s.g[k]?.v??'');return o}));const wb=XLSX.utils.book_new();XLSX.utils.book_append_sheet(wb,ws,'Grades');XLSX.writeFile(wb,'math-grades.xlsx');log('تصدير Excel')}
+function bk(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(db)],{type:'application/json'}));a.download='backup-'+new Date().toISOString().slice(0,10)+'.json';a.click();log('نسخ احتياطي')}
+function rs(el){const f=el.files[0];if(!f)return;ask('ستُستبدل كل البيانات الحالية. متابعة؟',()=>{const r=new FileReader();r.onload=e=>{try{const d=JSON.parse(e.target.result);if(!d.users||!d.students)throw 0;db=d;log('استعادة نسخة احتياطية');render()}catch(x){alert('ملف غير صالح')}};r.readAsText(f)})}
+const ar=s=>String(s).replace(/[0-9]/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+const nn=s=>String(s).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/[٫,،]/g,'.').replace(/[^0-9.]/g,'');
+function arTree(r){const w=document.createTreeWalker(r,NodeFilter.SHOW_TEXT);let n;while(n=w.nextNode())if(/[0-9]/.test(n.nodeValue)&&!n.parentElement.closest('.keep'))n.nodeValue=ar(n.nodeValue)}
+new MutationObserver(()=>arTree($('app'))).observe($('app'),{childList:true,subtree:true,characterData:true});
+const sumS=s=>Math.round(K.reduce((a,k)=>a+(s.g['p1'+k[0]]?.v||0),0)*100)/100,cntS=s=>K.filter(k=>s.g['p1'+k[0]]).length,stS=s=>cntS(s)<3?0:sumS(s)>=55?1:sumS(s)<=30?-1:0;
+const certHTML=s=>`<div class="cert"><div class="cs">🏅</div><h2>شكر وتقدير</h2><p class="to">إلى ولي أمر طالبنا المتميز : <span class="cn">${esc(s.name)}</span></p><p>يسعدنا أن نعبر لكم عن بالغ فخرنا واعتزازنا بما يقدمه ابنكم من تميز في مادة الرياضيات خلال الفترة الأولى من الفصل الدراسي الأول للعام ١٤٤٨ هـ ، وما يتحلى به من أخلاق رفيعة وأدب جم، جعلته نموذجًا مشرفًا في علمه وسلوكه.</p><p>إن هذا التميز لا يعكس اجتهاده وحسب، بل يحمل في طياته أثر تربية كريمة، ورعاية أسرية تستحق الثناء والتقدير.</p><p>فلكم منا خالص الشكر وعظيم الامتنان، فقد أحسنتم الغرس، وها نحن اليوم نفخر بطيب الثمر.</p><p>نسأل الله أن يبارك لكم فيه، وأن يقر أعينكم بصلاحه وتفوقه، وأن يكون هذا التميز بدايةً لمستقبل حافل بالنجاح والإنجاز.</p><div class="ft">ابتدائية السعودية بالقنفذة</div></div>`;
+const weakHTML=s=>newWeak(s);const weakHTML_old=s=>`<div class="card cw weak"><h2>⚠️ إشعار متابعة</h2>ولي الأمر الكريم، نفيدكم بأن مجموع درجات ابنكم <b>${esc(s.name)}</b> في مادة الرياضيات (الفترة الأولى) هو <b>${sumS(s)}</b> من ٦٠، وهو مستوى يحتاج إلى دعم إضافي. نأمل منكم متابعته في المذاكرة وحل الواجبات، والتواصل مع معلم المادة لوضع خطة علاجية مناسبة. نشكر لكم تعاونكم.</div>`;
+function printCert(id){const s=db.students.find(x=>x.id===(id||me.sid));if(!s)return;$('pr').innerHTML=certHTML(s);arTree($('pr'));log('طباعة شهادة تميز: '+s.name);document.body.classList.add('pcert');window.print();setTimeout(()=>{document.body.classList.remove('pcert');$('pr').innerHTML=''},1000)}
+function prCert(id){const s=db.students.find(x=>x.id===id);$('out').innerHTML=certHTML(s)+`<div style="text-align:center"><button class="p cm" onclick="printCert('${id}')">🖨️ طباعة / حفظ PDF</button></div>`;$('out').scrollIntoView({behavior:'smooth'})}
+function notice(id){const s=db.students.find(x=>x.id===id);log('عرض إشعار ضعف: '+s.name);$('out').innerHTML=weakHTML(s)+'<p class="m">يظهر هذا الإشعار تلقائياً في صفحة ولي الأمر عند دخوله، ويمكنك نسخ نصه وإرساله برسالة جوال أو واتساب.</p>';$('out').scrollIntoView({behavior:'smooth'})}
+const gradeOf=t=>t>=55?['متميز','#b45309']:t>=48?['ممتاز','#15803d']:t>=40?['جيد جداً','#1d4ed8']:t>30?['جيد','#7e22ce']:['غير مرضي','#dc2626'];
+function modal(h){let m=$('md');if(!m){m=document.createElement('div');m.id='md';document.body.appendChild(m)}m.className='md';m.innerHTML='<div class="mb">'+h+'</div>';m.onclick=e=>{if(e.target===m)closeM()};arTree(m)}
+function closeM(){const m=$('md');if(m)m.remove()}
+function toast(t){const e=document.createElement('div');e.className='ts';e.textContent=ar(t);document.body.appendChild(e);setTimeout(()=>e.remove(),3200)}
+window.alert=toast;
+function ask(t,fn){modal(`<p>${esc(t)}</p><div class="bar"><button class="p" id="ay">تأكيد</button><button onclick="closeM()">إلغاء</button></div>`);$('ay').onclick=()=>{closeM();fn()}}
+function chpwUI(){modal(`<h2>🔑 تغيير الرمز السري</h2><p class="m">٦ خانات: حروف إنجليزية صغيرة وكبيرة وأرقام</p><input id="np" type="password" dir="ltr" maxlength="6" autocomplete="off" style="width:100%;box-sizing:border-box;text-align:center;font-size:24px;letter-spacing:8px" oninput="this.value=this.value.replace(/[^A-Za-z0-9]/g,'')"><div class="bar" style="margin-top:10px"><button class="p" onclick="doChpw()">حفظ</button><button onclick="closeM()">إلغاء</button></div>`)}
+async function doChpw(){const p=$('np').value;if(!/^[A-Za-z0-9]{6}$/.test(p)||!/[a-z]/.test(p)||!/[A-Z]/.test(p)||!/[0-9]/.test(p))return toast('الرمز ٦ خانات ويحتوي حرفاً صغيراً وحرفاً كبيراً ورقماً');for(const x of db.users)if(x!==me&&x.role!=='student'&&await sha(x.s+p)===x.h)return toast('هذا الرمز مستخدم، اختر رمزاً آخر');me.s=rnd(10);me.h=await sha(me.s+p);log('تغيير كلمة المرور');closeM();toast('تم تغيير الرمز بنجاح ✅')}
+function newWeak(s){return `<div class="card cw weak"><h2>⚠️ إشعار ضعف المستوى</h2><p><b>ولي أمر الطالب (( ${esc(s.name)} ))</b></p><p>السلام عليكم و رحمة الله و بركاته ،،، و بعد نحيطكم علمًا بأن نتائج ابنكم في مادة الرياضيات خلال الفترة الأولى تشير إلى تدنٍّ في مستواه الدراسي، مما يستدعي مزيدًا من المتابعة والاهتمام.</p><p>نأمل منكم الاطلاع على درجاته، ومتابعة تحصيله الدراسي، والتعاون مع المدرسة لمعالجة جوانب الضعف وتحسين مستواه خلال الفترة القادمة.</p><p>شاكرين لكم تعاونكم وحرصكم على مصلحة ابنكم.</p></div>`}
+
+</script>
+<script src="/api-layer.js"></script>
+</body></html>
