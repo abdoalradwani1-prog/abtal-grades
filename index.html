@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.gstatic.com; connect-src https://*.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>إشعار متابعة ولي الأمر – الرياضيات للسادس الابتدائي</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
@@ -83,7 +83,7 @@ td input{width:62px;text-align:center}
 #pr{display:none}
 @page{size:A4 landscape;margin:12mm}
 @media print{.np{display:none!important}body{background:#fff;color:#000}body.pcert #app{display:none!important}body.pcert #pr{display:block}}
-</style></head><body><div class="w" id="app"></div><div id="pr"></div><script src="/config.js"></script>
+</style></head><body><div class="w" id="app"></div><div id="pr"></div>
 <script>
 const SK='mathgrades_demo_v5';
 const P=[['p1','الفترة الأولى','اختبار الفترة الأولى']];
@@ -98,11 +98,11 @@ const rnd=n=>{const c='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789@#
 const sha=async s=>[...new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)))].map(x=>x.toString(16).padStart(2,'0')).join('');
 const mk=async(u,pw,role,name,sid,contact)=>{const s=rnd(10);return{u,s,h:await sha(s+pw),role,name,sid,contact:contact||''}};
 const save=()=>{try{0}catch(e){}};
-const log=a=>{db.audit.unshift({t:new Date().toISOString(),by:me?me.u:'-',a});db.audit.length=Math.min(db.audit.length,500);save()};
+let log=a=>{};
 const hij=d=>new Date(d).toLocaleDateString('ar-SA-u-ca-islamic-umalqura',{day:'numeric',month:'short',year:'numeric'});
 const gre=d=>new Date(d).toLocaleDateString('ar-SA-u-ca-gregory',{day:'numeric',month:'short',year:'numeric'});
 function loginView(m){return `<div class="card lg cl"><div class="logo">🔔</div><h1>إشعار متابعة ولي الأمر</h1><p class="m">السادس الابتدائي – ابتدائية السعودية بالقنفذة</p>
-<p class="wl">ولي الأمر الكريم : يُرجى تسجيل الدخول من خلال الرمز السري المرسل مع الابن لمتابعة درجات ابنكم في مادة الرياضيات خلال الفترة الأولى من الفصل الدراسي الأول للعام ١٤٤٨ هـ</p><div class="tabs"><button class="${lm==='p'?'p':''}" onclick="lm='p';render()">ولي الأمر</button><button class="${lm==='t'?'p':''}" onclick="lm='t';render()">المعلم / المدير</button></div>${lm==='p'?`<label>الرمز السري (${ar(PIN_LEN)} أرقام)</label><input id="pin" inputmode="numeric" maxlength="${PIN_LEN}" autocomplete="off" style="text-align:center;font-size:28px;letter-spacing:12px" oninput="this.value=ar(nd(this.value))" onkeydown="if(event.key==='Enter')login()">`:`<label>الرمز السري للمعلم (٦ خانات: حروف إنجليزية وأرقام)</label><input id="tp" type="password" dir="ltr" maxlength="6" autocomplete="off" autocapitalize="off" style="text-align:center;font-size:26px;letter-spacing:8px" oninput="this.value=this.value.replace(/[^A-Za-z0-9]/g,'')" onkeydown="if(event.key==='Enter')login()">`}
+<p class="wl">ولي الأمر الكريم : يُرجى تسجيل الدخول من خلال رمز الدخول (أو الرابط) المرسل مع الابن لمتابعة درجات ابنكم في مادة الرياضيات خلال الفترة الأولى من الفصل الدراسي الأول للعام ١٤٤٨ هـ</p><div class="tabs"><button class="${lm==='p'?'p':''}" onclick="lm='p';render()">ولي الأمر</button><button class="${lm==='t'?'p':''}" onclick="lm='t';render()">المعلم / المدير</button></div>${lm==='p'?`<label>رمز الدخول (١٠ خانات: حروف إنجليزية وأرقام)</label><input id="pin" dir="ltr" maxlength="11" autocomplete="off" autocapitalize="characters" style="text-align:center;font-size:24px;letter-spacing:4px" oninput="this.value=this.value.toUpperCase()" onkeydown="if(event.key==='Enter')login()">`:`<label>رمز دخول المعلم / المدير</label><input id="tp" type="password" dir="ltr" maxlength="20" autocomplete="off" autocapitalize="off" style="text-align:center;font-size:26px;letter-spacing:8px" oninput="this.value=this.value.replace(/[^A-Za-z0-9]/g,'')" onkeydown="if(event.key==='Enter')login()">`}
 <button class="p" style="width:100%" onclick="login()">دخول</button><p class="err">${m||''}</p>
 </div>`}
 async function login(){
@@ -166,7 +166,7 @@ async function addS(){const n=$('nn').value.trim();if(!n)return;const c=await ne
 function del(id){ask('حذف الطالب وحسابه؟',()=>del2(id))}
 function del2(id){const s=db.students.find(x=>x.id===id);db.students=db.students.filter(x=>x.id!==id);db.users=db.users.filter(u=>u.sid!==id);log('حذف طالب: '+s.name);render()}
 async function rpw(id){const u=db.users.find(x=>x.sid===id),pw=await uPin();u.s=rnd(10);u.h=await sha(u.s+pw);log('إعادة تعيين كلمة مرور: '+u.name);render();$('out').innerHTML=`<p class="err">الرمز السري الجديد (٤ أرقام) لـ ${esc(u.name)}: ${esc(pw)}</p>`}
-async function chpw(){const p=(prompt('الرمز الجديد (٦ خانات: حروف إنجليزية صغيرة وكبيرة وأرقام):')||'').trim();if(!p)return;
+async function chpw(){const p=(prompt('الرمز الجديد (٨ إلى ١٢ خانة: حروف إنجليزية صغيرة وكبيرة وأرقام):')||'').trim();if(!p)return;
   if(!/^[A-Za-z0-9]{6}$/.test(p)||!/[a-z]/.test(p)||!/[A-Z]/.test(p)||!/[0-9]/.test(p))return alert('الرمز ٦ خانات (إنجليزية) ويحتوي حرفاً صغيراً وحرفاً كبيراً ورقماً');for(const x of db.users)if(x!==me&&x.role!=='student'&&await sha(x.s+p)===x.h)return alert('هذا الرمز مستخدم، اختر رمزاً آخر');me.s=rnd(10);me.h=await sha(me.s+p);log('تغيير كلمة المرور');alert('تم التغيير')}
 const FM=[['name','الاسم',/اسم|name/i],['cls','الفصل',/فصل|صف|class/i],['contact','جوال/بريد ولي الأمر',/جوال|هاتف|بريد|phone|mail/i]];
 P.forEach((p,i)=>{const pr=i?/ثانية|2/:/[اأإ]ولى|1/;[[ 'a','مشاركة|واجب|particip'],['b','مهام|أدائ|task'],['c','اختبار(?!.*نهائ)|test']].forEach(([s,r])=>FM.push([p[0]+s,p[1]+' – '+lbl(p[0]+s),new RegExp(r,'i'),pr]))});
@@ -205,10 +205,10 @@ function closeM(){const m=$('md');if(m)m.remove()}
 function toast(t){const e=document.createElement('div');e.className='ts';e.textContent=ar(t);document.body.appendChild(e);setTimeout(()=>e.remove(),3200)}
 window.alert=toast;
 function ask(t,fn){modal(`<p>${esc(t)}</p><div class="bar"><button class="p" id="ay">تأكيد</button><button onclick="closeM()">إلغاء</button></div>`);$('ay').onclick=()=>{closeM();fn()}}
-function chpwUI(){modal(`<h2>🔑 تغيير الرمز السري</h2><p class="m">٦ خانات: حروف إنجليزية صغيرة وكبيرة وأرقام</p><input id="np" type="password" dir="ltr" maxlength="6" autocomplete="off" style="width:100%;box-sizing:border-box;text-align:center;font-size:24px;letter-spacing:8px" oninput="this.value=this.value.replace(/[^A-Za-z0-9]/g,'')"><div class="bar" style="margin-top:10px"><button class="p" onclick="doChpw()">حفظ</button><button onclick="closeM()">إلغاء</button></div>`)}
+function chpwUI(){modal(`<h2>🔑 تغيير الرمز السري</h2><p class="m">٦ خانات: حروف إنجليزية صغيرة وكبيرة وأرقام</p><input id="np" type="password" dir="ltr" maxlength="12" autocomplete="off" style="width:100%;box-sizing:border-box;text-align:center;font-size:24px;letter-spacing:8px" oninput="this.value=this.value.replace(/[^A-Za-z0-9]/g,'')"><div class="bar" style="margin-top:10px"><button class="p" onclick="doChpw()">حفظ</button><button onclick="closeM()">إلغاء</button></div>`)}
 async function doChpw(){const p=$('np').value;if(!/^[A-Za-z0-9]{6}$/.test(p)||!/[a-z]/.test(p)||!/[A-Z]/.test(p)||!/[0-9]/.test(p))return toast('الرمز ٦ خانات ويحتوي حرفاً صغيراً وحرفاً كبيراً ورقماً');for(const x of db.users)if(x!==me&&x.role!=='student'&&await sha(x.s+p)===x.h)return toast('هذا الرمز مستخدم، اختر رمزاً آخر');me.s=rnd(10);me.h=await sha(me.s+p);log('تغيير كلمة المرور');closeM();toast('تم تغيير الرمز بنجاح ✅')}
 function newWeak(s){return `<div class="card cw weak"><h2>⚠️ إشعار ضعف المستوى</h2><p><b>ولي أمر الطالب (( ${esc(s.name)} ))</b></p><p>السلام عليكم و رحمة الله و بركاته ،،، و بعد نحيطكم علمًا بأن نتائج ابنكم في مادة الرياضيات خلال الفترة الأولى تشير إلى تدنٍّ في مستواه الدراسي، مما يستدعي مزيدًا من المتابعة والاهتمام.</p><p>نأمل منكم الاطلاع على درجاته، ومتابعة تحصيله الدراسي، والتعاون مع المدرسة لمعالجة جوانب الضعف وتحسين مستواه خلال الفترة القادمة.</p><p>شاكرين لكم تعاونكم وحرصكم على مصلحة ابنكم.</p></div>`}
 
 </script>
-<script src="/api-layer.js"></script>
+<script src="api-layer.js"></script>
 </body></html>
